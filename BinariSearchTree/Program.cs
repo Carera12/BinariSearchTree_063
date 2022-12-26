@@ -83,7 +83,20 @@ namespace BinariSearchTree
                 inorder(ptr.rchild);
             }
         }
-        
+        public void preorder(Node ptr)
+        {
+            if(ROOT == null)
+            {
+                Console.WriteLine("tree empty");
+                return;
+            }
+            if (ptr != null)
+            {
+                Console.WriteLine(ptr.info + "");
+                preorder(ptr.lchild);
+                preorder(ptr.rchild);
+            }
+        }
     }
     class Program
     {
