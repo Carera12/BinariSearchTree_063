@@ -6,8 +6,24 @@ using System.Threading.Tasks;
 
 namespace BinariSearchTree
 {
-    internal class Program
+    /*Node Class consi*/
+    class Node
     {
+        public string info;
+        public Node lchild;
+        public Node rchild;
+
+        //Construkstore for the node class
+        public Node(string i, Node l, Node r)
+        {
+            info = i;
+            lchild = l;
+            rchild = r;
+        }
+    }
+    class Program
+    {
+        
         static void Main(string[] args)
         {
         }
