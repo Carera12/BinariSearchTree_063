@@ -21,6 +21,29 @@ namespace BinariSearchTree
             rchild = r;
         }
     }
+    class BinaryTree
+    {
+        public Node ROOT;
+        public BinaryTree()
+        {
+            ROOT = null; //intalizin root to null
+        }
+        
+
+        public void find(string element, ref Node parent, ref Node currentnode)
+        {
+            currentnode = ROOT;
+            parent = null;
+            while((currentnode != null)&& (currentnode.info != null))
+            {
+                parent = currentnode;
+                if (string.Compare(element, currentnode.info) < 0)
+                    currentnode = currentnode.rchild;
+                else
+                    currentnode = currentnode.lchild;
+            }
+        }
+    }
     class Program
     {
         
