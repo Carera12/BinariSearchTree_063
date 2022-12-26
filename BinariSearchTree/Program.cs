@@ -87,7 +87,7 @@ namespace BinariSearchTree
         {
             if(ROOT == null)
             {
-                Console.WriteLine("tree empty");
+                Console.WriteLine("tree is empty");
                 return;
             }
             if (ptr != null)
@@ -101,7 +101,7 @@ namespace BinariSearchTree
         {
             if (ROOT == null)
             {
-                Console.WriteLine("tree empty");
+                Console.WriteLine("tree is empty");
                 return;
             }
             if (ptr != null)
@@ -114,9 +114,10 @@ namespace BinariSearchTree
     }
     class Program
     {
-        
         static void Main(string[] args)
         {
+            BinaryTree x = new BinaryTree();
+
         }
     }
 }
