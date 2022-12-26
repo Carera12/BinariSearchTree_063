@@ -28,7 +28,33 @@ namespace BinariSearchTree
         {
             ROOT = null; //intalizin root to null
         }
-        
+        public void insert(string element) // insert a root the binary
+        {
+            Node tmp, parent = null, currentnode = null;
+            find(element, ref parent, ref currentnode);
+            if (currentnode != null)
+            {
+                Console.WriteLine("duplicat words not allowed");
+                return;
+            }
+            else // if the specified node is not present
+            {
+                tmp = new Node(element, null, null);
+                if (parent == null)
+                {
+                    ROOT = tmp;
+                }
+                else if (string.Compare(element, parent.info) < 0)
+                {
+                    if (string.Compare(element, parent.info) < 0)
+                        parent.lchild = tmp;
+                }
+                else
+                {
+                    parent.rchild = tmp;
+                }
+            }
+        }
 
         public void find(string element, ref Node parent, ref Node currentnode)
         {
