@@ -69,6 +69,21 @@ namespace BinariSearchTree
                     currentnode = currentnode.lchild;
             }
         }
+        public void inorder(Node ptr)
+        {
+            if(ROOT == null)
+            {
+                Console.WriteLine("tree is empty");
+                return;
+            }
+            if(ptr != null)
+            {
+                inorder(ptr.lchild);
+                Console.WriteLine(ptr.info + "");
+                inorder(ptr.rchild);
+            }
+        }
+        
     }
     class Program
     {
