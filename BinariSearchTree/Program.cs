@@ -79,7 +79,7 @@ namespace BinariSearchTree
             if(ptr != null)
             {
                 inorder(ptr.lchild);
-                Console.WriteLine(ptr.info + "");
+                Console.WriteLine(ptr.info + " ");
                 inorder(ptr.rchild);
             }
         }
@@ -92,7 +92,7 @@ namespace BinariSearchTree
             }
             if (ptr != null)
             {
-                Console.WriteLine(ptr.info + "");
+                Console.WriteLine(ptr.info + " ");
                 preorder(ptr.lchild);
                 preorder(ptr.rchild);
             }
@@ -108,7 +108,7 @@ namespace BinariSearchTree
             {
                 postorder(ptr.lchild);
                 postorder(ptr.rchild);
-                Console.WriteLine(ptr.info + "");
+                Console.WriteLine(ptr.info + " ");
             }
         }
         static void Main(string[] args)
@@ -125,6 +125,18 @@ namespace BinariSearchTree
                 Console.WriteLine("\nEnter your choice (1-5): ");
                 char ch = Convert.ToChar(Console.ReadLine());
                 Console.WriteLine();
+                switch (ch)
+                {
+                    case '1':
+                        {
+                            Console.WriteLine("Enter a word: ");
+                            string word = Console.ReadLine();
+                            x.insert(word);
+                        }
+                        break;
+                   
+                }
+                
             }
         }
     }
