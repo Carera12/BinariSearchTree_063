@@ -111,13 +111,22 @@ namespace BinariSearchTree
                 Console.WriteLine(ptr.info + "");
             }
         }
-    }
-    class Program
-    {
         static void Main(string[] args)
         {
             BinaryTree x = new BinaryTree();
-
+            while (true)
+            {
+                Console.WriteLine("\n MENU");
+                Console.WriteLine("1. implement insert operation");
+                Console.WriteLine("2. perform inorder traversal");
+                Console.WriteLine("3. perform preorder traversal");
+                Console.WriteLine("4. perform postorder traversal");
+                Console.WriteLine("5. exit");
+                Console.WriteLine("\nEnter your choice (1-5): ");
+                char ch = Convert.ToChar(Console.ReadLine());
+                Console.WriteLine();
+            }
         }
     }
+    
 }
